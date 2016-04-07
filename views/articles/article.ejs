@@ -1,0 +1,24 @@
+<% include ../header %>
+<div class='row'>
+
+  <div class='col-md-2'></div>
+  <div class='col-md-8'>
+    <h1><%= headline %></h1>
+    <div class='article'>
+      <%= article %>
+    </div>
+  </div>
+  <div class='col-md-2'></div>
+</div>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function(){
+    var txt = $('.article').text();
+    $('.article').html('<p>'+txt+'</p>');
+  });
+</script>
+</body>
+</html>

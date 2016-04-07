@@ -27,8 +27,8 @@ router.get('/new', function(req, res, next) {
 /*CREATE entry: POST /til/ */
 router.post('/', function(req, res, next) {
     req.db.driver.execQuery(
-      "INSERT INTO articles (headline,body) VALUES (?,?);",
-      [req.body.slug,req.body.body],
+      "INSERT INTO articles (headline,article) VALUES (?,?);",
+      [req.body.headline,req.body.article],
       function(err,data){
         if(err)
         {
@@ -92,7 +92,9 @@ router.get('/:id', function(req, res, next) {
         if (err){
           console.log(err);
         }
-        res.render('artices/article', { title: 'Logan Foodies', article: data[0]});
+        var txt = data[0].article;
+        txt = txt.replace(/\r\n/g,'</p> <p>');
+        res.render('articles/article', { title: 'Logan Foodies', headline: data[0].headline, article: txt});
       }
     );
 });

@@ -5,7 +5,12 @@ var crypto = require('crypto');
 /* GET home page. */
 router.get('/', function(req, res, next) {
     var name = req.cookies.username;
-    res.render('index', { title: 'Logan Foodies', name: name});
+    res.render('index', { title: 'Eat Me', name: name});
+});
+
+/* GET about page. */
+router.get('/about', function(req, res, next) {
+    res.render('index', { title: 'About Eat Me'});
 });
 
 router.get('/login', function(req, res, next) {

@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 
 /* GET about page. */
 router.get('/about', function(req, res, next) {
-    res.render('index', { title: 'About Eat Me'});
+    res.render('about', { title: 'About Eat Me'});
 });
 
 router.get('/login', function(req, res, next) {

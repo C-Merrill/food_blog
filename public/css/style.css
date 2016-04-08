@@ -8,7 +8,7 @@ body {
 }
 
 nav {
-    background: #008811;
+    background: #BA1F14;
 }
 nav ul{
     list-style-type: none;
@@ -22,7 +22,7 @@ nav a{
 }
 nav  li {
     position: relative;
-    background-color: #008811;
+    background-color: #BA1F14;
     width: 90px;
 }
 nav > ul {
@@ -40,9 +40,10 @@ nav > ul > li > a{
     text-decoration: none;
     font-family: arial, sans-serif;
     font-size: 16px;
-    color: #FFFFFF;
+    color: #CCCCCC;
     position: relative;
     top: 12px;
+    padding: 15px 13px;
 }
 nav li ul {
     display: none;
@@ -50,14 +51,15 @@ nav li ul {
     top: 100%;
     right: 50%;
 }
-nav li:hover {
-    background: #00AA11;
+nav a:hover {
+    text-decoration: none;
+    color: #FFFFFF;
 }
 nav li:hover ul {
     display: block;
 }
 
 h1 {
-    color: #009E11;
+    color: #BA1F14;
     font-weight:bold;
 }

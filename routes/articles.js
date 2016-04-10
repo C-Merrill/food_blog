@@ -94,7 +94,7 @@ router.get('/:id', function(req, res, next) {
         }
         var txt = data[0].article;
         txt = txt.replace(/\r\n/g,'</p> <p>');
-        res.render('articles/article', { title: 'Logan Foodies', headline: data[0].headline, article: txt});
+        res.render('articles/article', { title: 'Eat Me', headline: data[0].headline, article: txt});
       }
     );
 });
